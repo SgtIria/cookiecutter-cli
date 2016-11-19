@@ -1,0 +1,24 @@
+build: off
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python35"
+      PYTHON_VERSION: "3.5.2"
+      PYTHON_ARCH: "32"
+      TOX_ENV: "py35"
+
+    - PYTHON: "C:\\Python35-x64"
+      PYTHON_VERSION: "3.5.2"
+      PYTHON_ARCH: "64"
+      TOX_ENV: "py35"
+
+install:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "pip install --disable-pip-version-check --user --upgrade pip"
+  - "pip install -r requirements/dev.txt"
+
+test_script:
+- "tox -e %TOX_ENV%"
+
+test_script:
+  - "py.test -vvs tests"

@@ -1,0 +1,17 @@
+{
+  "author": "Kalwyn Solork",
+  "email": "kalwyn@protonmaim.com",
+  "github_username": "Kalwyn",
+  "project_name": "Python project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "command_name": "{{ cookiecutter.project_slug }}",
+  "description": "Command line interface project.",
+  "version": "0.1.0",
+  "use_travis": "y",
+  "use_appveyor": "y",
+  "license": [
+    "MIT", "GNU GPL v3.0", "GNU LGPL v3.0", "Apache Software License 2.0",
+    "GNU AGPL v3.0", "Mozilla Public License 2.0", "BSD", "Unlicense",
+    "Not open source"
+  ]
+}
