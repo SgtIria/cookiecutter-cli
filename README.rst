@@ -2,6 +2,12 @@
 Cookiecutter-cli
 ================
 
+.. image:: https://travis-ci.org/Kalwyn/cookiecutter-cli.svg?branch=master
+    :target: https://travis-ci.org/Kalwyn/cookiecutter-cli
+
+.. image:: https://ci.appveyor.com/api/projects/status/n3dheupcd9lcffkg?svg=true
+
+
 A Cookiecutter_ template to generate a command line interface project
 with click for python version >= 3.3.
 Template inspired by Pypackage_ of Audrey Roy Greenfeld.
