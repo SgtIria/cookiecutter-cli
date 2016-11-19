@@ -1,4 +1,5 @@
 import os
+import sys
 import importlib
 
 from click.testing import CliRunner
@@ -56,9 +57,18 @@ def test_console_script_cli(cookies):
     module_path = os.path.join(project_dir, "cli.py")
     module_name = ".".join([project_slug, "cli"])
 
-    spec = importlib.util.spec_from_file_location(module_name, module_path)
-    cli = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(cli)
+    if sys.version_info >= (3, 5):
+        spec = importlib.util.spec_from_file_location(module_name, module_path)
+        cli = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cli)
+    elif sys.version_info >= (3, 3):
+        file_loader = importlib.machinery.SourceFileLoader
+        cli = file_loader(module_name, module_path).load_module()
+    else:
+        raise Exception(
+            "Error: Wrong python version: {} need 3.3+".format(
+                sys.version[:5])
+        )
 
     runner = CliRunner()
     cli_result = runner.invoke(cli.python_project, ["test"])
