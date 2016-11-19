@@ -12,6 +12,26 @@ environment:
       PYTHON_ARCH: "64"
       TOX_ENV: "py35"
 
+    - PYTHON: "C:\\Python34"
+      PYTHON_VERSION: "3.4.5"
+      PYTHON_ARCH: "32"
+      TOX_ENV: "py34"
+
+    - PYTHON: "C:\\Python34-x64"
+      PYTHON_VERSION: "3.4.5"
+      PYTHON_ARCH: "64"
+      TOX_ENV: "py34"
+
+    - PYTHON: "C:\\Python33"
+      PYTHON_VERSION: "3.3.6"
+      PYTHON_ARCH: "32"
+      TOX_ENV: "py33"
+
+    - PYTHON: "C:\\Python35-x64"
+      PYTHON_VERSION: "3.3.6"
+      PYTHON_ARCH: "64"
+      TOX_ENV: "py33"
+
 install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "pip install --disable-pip-version-check --user --upgrade pip"

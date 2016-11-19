@@ -3,7 +3,7 @@ Cookiecutter-cli
 ================
 
 A Cookiecutter_ template to generate a command line interface project
-with click.
+with click for python version >= 3.3.
 Template inspired by Pypackage_ of Audrey Roy Greenfeld.
 
 Features
@@ -20,7 +20,7 @@ Features
 
 Prerequisite
 ============
-Install cookiecutter and virtualenv_ [#]_ packages from pip::
+Install cookiecutter_ and virtualenv_ [#]_ packages from pip::
 
     pip install -U cookiecutter virtualenv
 
