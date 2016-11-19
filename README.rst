@@ -6,7 +6,7 @@ Cookiecutter-cli
     :target: https://travis-ci.org/Kalwyn/cookiecutter-cli
 
 .. image:: https://ci.appveyor.com/api/projects/status/n3dheupcd9lcffkg?svg=true
-
+    :target: https://ci.appveyor.com/project/Kalwyn/cookiecutter-cli
 
 A Cookiecutter_ template to generate a command line interface project
 with click for python version >= 3.3.
