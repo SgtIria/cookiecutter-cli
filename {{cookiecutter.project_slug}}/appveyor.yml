@@ -19,6 +19,3 @@ install:
 
 test_script:
 - "tox -e %TOX_ENV%"
-
-test_script:
-  - "py.test -vvs tests"
