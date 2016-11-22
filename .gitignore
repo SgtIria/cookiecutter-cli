@@ -96,5 +96,5 @@ output/
 python_boilerplate/
 
 # Env files
-.env
-.env_leave
+/.env
+/.env_leave

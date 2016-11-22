@@ -94,7 +94,3 @@ target/
 # Cookiecutter
 output/
 python_boilerplate/
-
-# Env files
-.env
-.env_leave

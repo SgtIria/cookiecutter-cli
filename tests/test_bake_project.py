@@ -13,6 +13,10 @@ def test_bake_project(cookies):
     assert result.project.basename == "python_project"
     assert result.project.isdir()
 
+    git_ignore = result.project.join(".gitignore")
+    for env_file in [".env", ".env_leave"]:
+        assert env_file in git_ignore.read()
+
 
 def test_bake_project_with_wrong_project_name(cookies):
     result = cookies.bake(extra_context={"project_slug": "project$name"})
